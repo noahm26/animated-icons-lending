@@ -9,6 +9,7 @@ import { AnimationOptions } from 'ngx-lottie';
 		<ng-lottie
 			width="120px"
 			height="120px"
+			containerClass="icon-box"
 			[styles]="styles"
 			[options]="options"
 			(animationCreated)="animationCreated($event)"
@@ -55,10 +56,15 @@ export class IconPurchaseComponent {
 
 	play = (): void => {
 		//this.ngZone.runOutsideAngular(() => this.animationItem.play());
+		this.ngZone.runOutsideAngular(() => this.animationItem.setDirection(1));
+		this.ngZone.runOutsideAngular(() => this.animationItem.setSpeed(1));
 		this.ngZone.runOutsideAngular(() => this.animationItem.goToAndPlay(1));
 	};
 
 	reset = (): void => {
-		this.ngZone.runOutsideAngular(() => this.animationItem.goToAndStop(1));
+		//this.ngZone.runOutsideAngular(() => this.animationItem.goToAndStop(1));
+		this.ngZone.runOutsideAngular(() => this.animationItem.setDirection(-1));
+		this.ngZone.runOutsideAngular(() => this.animationItem.setSpeed(2));
+		this.ngZone.runOutsideAngular(() => this.animationItem.play());
 	};
 }
