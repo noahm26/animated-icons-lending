@@ -1,0 +1,39 @@
+<div class="nm-container">
+  <h1>Animated SVG Icons</h1>
+  <h2>Noah Malewicz</h2>
+  <a href="https://www.instagram.com/chunkyapps/">@ChunkyApps</a>
+  <div class="buttons">
+    <button
+      class="icon-btn"
+      role="button"
+      style="cursor: pointer;"
+      (mouseenter)="playPurchaseAnimation()"
+    >
+      <app-icon-purchase #purchaseIcon></app-icon-purchase>
+      <span>Home</span>
+      <em>Purchase</em>
+    </button>
+
+    <button
+      class="icon-btn"
+      role="button"
+      style="cursor: pointer;"
+      (mouseenter)="playRefiAnimation()"
+    >
+      <app-icon-refinance #refiIcon></app-icon-refinance>
+      <span>Home</span>
+      <em>Refinance</em>
+    </button>
+
+    <button
+      class="icon-btn"
+      role="button"
+      style="cursor: pointer;"
+      (mouseenter)="playEquityAnimation()"
+    >
+      <app-icon-equity #equityIcon></app-icon-equity>
+      <span>Home</span>
+      <em>Equity</em>
+    </button>
+  </div>
+</div>
